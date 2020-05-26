@@ -31,18 +31,15 @@ namespace SSLGrabber
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 response.Close();
 
-                //retrieve the ssl cert and assign it to an X509Certificate object
                 X509Certificate cert = request.ServicePoint.Certificate;
 
-                //convert the X509Certificate to an X509Certificate2 object by passing it into the constructor
                 X509Certificate2 cert2 = new X509Certificate2(cert);
-#pragma warning disable CS0618 // Typ oder Element ist veraltet
+#pragma warning disable CS0618
                 string issuer = cert2.GetIssuerName();
-#pragma warning restore CS0618 // Typ oder Element ist veraltet
+#pragma warning restore CS0618 
                 Thread.Sleep(1000);
 
                 Console.Clear();
-                Console.WriteLine("Fetching..");
 
                 string issuerdetailed1 = cert2.GetIssuerName().ToString().Replace("C=", "").Replace("CN=", "").Replace("O=", ""); ; 
 
