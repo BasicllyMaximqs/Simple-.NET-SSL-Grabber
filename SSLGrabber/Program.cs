@@ -45,7 +45,7 @@ namespace SSLGrabber
 
                 Console.WriteLine("\n");
                 Console.WriteLine("***************************************************");
-                Console.WriteLine("SSLGrabber Environment Print @ " + DateTime.Now);
+                Console.WriteLine("SSLGrabber Print @ " + DateTime.Now);
                 Console.WriteLine("***************************************************");
                 Console.WriteLine("");
                 Console.WriteLine("Website: " + input);
